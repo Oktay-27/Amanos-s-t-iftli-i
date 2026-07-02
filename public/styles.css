@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --pine: #24352B;
+  --pine-deep: #16211B;
+  --milk: #FAF6EC;
+  --gold: #C99A2E;
+  --sage: #93A98B;
+  --ink: #22201B;
+  --line: rgba(34,32,27,0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--milk);
+  color: var(--ink);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+a { color: inherit; }
+
+/* Dağ silueti - Amanos Dağları'ndan ilham */
+.ridge {
+  width: 100%;
+  height: 64px;
+  display: block;
+}
+.ridge path { fill: var(--pine); }
+.ridge.flip path { fill: var(--milk); }
+
+header.site {
+  background: var(--pine);
+  color: var(--milk);
+  padding: 22px 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header.site .brand {
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--milk);
+}
+header.site nav a {
+  text-decoration: none;
+  color: var(--milk);
+  opacity: 0.85;
+  margin-left: 28px;
+  font-size: 0.95rem;
+}
+header.site nav a:hover { opacity: 1; }
+
+.hero {
+  background: var(--pine);
+  color: var(--milk);
+  padding: 60px 6vw 90px;
+}
+.hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  max-width: 14ch;
+  margin-top: 14px;
+  line-height: 1.05;
+}
+.hero p {
+  max-width: 46ch;
+  margin-top: 18px;
+  color: rgba(250,246,236,0.82);
+  font-size: 1.08rem;
+}
+
+main { max-width: 1080px; margin: 0 auto; padding: 0 6vw; }
+
+section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+section:last-of-type { border-bottom: none; }
+
+.section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 12px; }
+.section-head h2 { font-size: 1.9rem; }
+.section-head .num { font-family: 'Fraunces', serif; color: var(--gold); font-size: 0.95rem; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px; }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 26px;
+}
+.card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.card .price { color: var(--gold); font-weight: 600; font-family: 'Fraunces', serif; font-size: 1.2rem; margin-top: 12px; }
+.card p { color: rgba(34,32,27,0.72); font-size: 0.95rem; }
+.card .avail { display: inline-block; margin-top: 10px; font-size: 0.78rem; padding: 4px 10px; border-radius: 100px; background: rgba(147,169,139,0.25); color: #3d5236; }
+
+footer {
+  background: var(--pine-deep);
+  color: rgba(250,246,236,0.7);
+  padding: 40px 6vw;
+  font-size: 0.9rem;
+}
+footer a { color: var(--gold); text-decoration: none; }
+footer .cols { display: flex; gap: 60px; flex-wrap: wrap; margin-bottom: 24px; }
+footer h4 { color: var(--milk); font-family: 'Work Sans'; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+
+.policy-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  padding: 24px 28px;
+  border-radius: 4px;
+  margin-bottom: 22px;
+}
+.policy-box h3 { font-size: 1.1rem; margin-bottom: 8px; }
+
+@media (max-width: 640px) {
+  header.site nav a { margin-left: 16px; font-size: 0.85rem; }
+  footer .cols { gap: 32px; }
+  }
+
